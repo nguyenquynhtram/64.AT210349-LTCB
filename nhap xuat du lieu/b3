@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+	int a ,b,tong,hieu,tich ;
+	printf("nhap vao 2 so nguyen :  ");
+	scanf("%d%d",&a,&b);
+	
+	tong = a + b;
+	hieu = a - b;
+	tich = a*b;
+	float thuong = a*1.0/b;
+	printf("tong = %d\nhieu = %d\ntich = %d\nthuong = %.1f",tong,hieu,tich,thuong);
+}
