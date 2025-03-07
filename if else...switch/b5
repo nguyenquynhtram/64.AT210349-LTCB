@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	float a,b,c,dt,x1,x2,x;
+	printf("nhap vao a,b va c: ");
+	scanf("%f%f%f",&a,&b,&c);
+	dt = b*b-4*a*c;
+	if (dt > 0){
+		x1=(-b+sqrt(dt))/(2*a);
+		x2=(-b-sqrt(dt))/(2*a);
+	    printf("pt co 2 nghiem phan biet: x1 = %.2f va x2 = %.2f",x1,x2);	
+	}
+	else if(dt==0){
+		x = -b/(2*a);
+		printf("pt co nghiem kep x = %.2f", x);
+	}
+	else 
+	  printf("pt vo nghiem");
+}
