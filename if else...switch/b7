@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+	float diemtb ;
+	printf("nhap vao diem cua hoc sinh : ");
+	scanf("%f",&diemtb);
+	
+	if(diemtb>=0 && diemtb<=10){
+		if (diemtb>= 9)
+		   printf("Xuat sac");
+		else if(diemtb>=8 && diemtb<9)
+		   printf("Gioi");
+		else if(diemtb>=7 && diemtb<8)
+		   printf("Kha");
+		else if(diemtb>=5 && diemtb<7)
+		   printf("Trung binh");
+		else 
+		   printf("Yeu");
+	}
+	else 
+	   printf("diem ban nhap khong hop le, vui long kiem tra lai");
+}
