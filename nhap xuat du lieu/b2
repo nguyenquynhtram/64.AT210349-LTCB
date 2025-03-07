@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+	int ngay,thang,nam;
+	printf("nhap vao ngay,thang va nam : ");
+	scanf("%d%d%d",&ngay,&thang,&nam);
+	
+	printf("Hom nay la ngay %02d/%02d/%4d",ngay,thang,nam);
+}
