@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+	float x ;
+	printf("nhap vao so x bat ki: ");
+	scanf("%f",&x);
+	
+	printf("gia tri cua x^2 , x^3 ,x^4 lan luot la : %.1f ; %.1f ; %.1f",x*x,x*x*x,x*x*x*x);
+}
