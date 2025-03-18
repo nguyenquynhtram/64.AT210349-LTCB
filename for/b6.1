@@ -2,13 +2,20 @@
 
 int main()
 {
-    int i,a,b,ucln,bcnn;
+    int i,a,b,ucln,bcnn,tg;
     printf("nhap vao 2 so nguyen a va b: ");
     scanf("%d%d",&a,&b);
     
-    for(i = 2;i <= a || i <= b;i++){
+    if (a > b){
+        tg = a;
+        a = b;
+        b = tg;
+    }
+    
+    for(i = a; i >= 1;i--){
         if (a%i==0 && b%i==0){
             ucln = i ;
+            break;
         }
     }
     printf("ucln = %d",ucln);
