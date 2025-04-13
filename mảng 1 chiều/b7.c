@@ -7,21 +7,22 @@ int main()
     printf("nhap vao so phan tu cua mang: ");
     scanf("%d",&n);
     
+    printf("nhap vao cac phan tu cua mang: ");
     for(i = 0;i < n;i++){
-        printf("nhap vao phan tu thu %d: ",i);
         scanf("%d",&a[i]);
     }
     
-    for(j = n;j >= 0;j--){
-        for(i = 0;i < n - 1;i++){
-            if (a[i] > a[i+1]){
+    for(i = 0;i < n;i++){
+        for(j = i;j < n;j++){
+            if (a[i] > a[j]){
                 s = a[i];
-                a[i] = a[i +1];
-                a[i+1]=s;
+                a[i] = a[j];
+                a[j]=s;
             }
         }
     }
     
+    printf("mang sau khi sap xep la: ");
     for(i = 0;i < n;i++){
         printf("%d  ",a[i]);
     }
