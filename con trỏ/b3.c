@@ -1,29 +1,37 @@
 #include <stdio.h>
-int in(int a[], int n){
-	for (int i=0; i<n; i++){
-		printf("%d ",a[i]);
+
+int main(){
+	int a[50],i,n;
+	int *pa;
+	pa = a;
+	
+	printf("nhap vao so luong phan tu cua mang: ");
+	scanf("%d",&n);
+	
+	//nhap gia tri mang
+	for(i = 0;i < n;i++){
+		printf("nhap vao phan tu a[%d]: ",i);
+		scanf("%d",pa + i);
 	}
-}
-void xep(int a[], int n){
-	for (int i=0; i<n; i++ ){
-		for (int j=i; j<n; j++){
-			if (a[i]>a[j]){
-				int p=a[i];
-				a[i]=a[j];
-				a[j]=p;
-			}
+	
+	int max = *pa;
+	for(i = 0;i < n;i++){
+		if(*(pa+i) > max){
+			max = *(pa+i);
 		}
 	}
-}
-int main (){
-	int n;
-	printf("nhap so phan tu cua mang\n");
-	scanf("%d",&n);
-	int a[n];
-	printf("nhap mang gom %d phan tu\n",n);
-	for (int i=0; i<n; i++){
-		scanf("%d",&a[i]);
+	
+	int min = *pa;
+	for(i = 0;i < n;i++){
+		if(*(pa+i) < min){
+			min = *(pa+i);
+		}
 	}
-	xep(a,n);
-	printf("min = %d\nmax = %d",a[0],a[n-1]);
+	
+	printf("gia tri lon nhat cua mang la: %d",max);
+	printf("\ngia tri nho nhat cua mang la: %d",min);
 }
+	
+	
+	
+	
